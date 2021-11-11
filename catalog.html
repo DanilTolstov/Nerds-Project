@@ -5,9 +5,74 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Дизайн-студия «Nerds»</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
+<header class="main-header">
+    <div class="container">
+        <a class="header-logo">
+            <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
+        </a>
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#" class="nav-link">Студия</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link">Клиенты</a></li>
+                <li class="nav-list-item"><a href="/catalog.html" class="nav-link">Магазин</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
 
+        <ul class="cart">
+            <li class="cart-item">
+                <button class="cart-button" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                        <circle fill="#a6a6a6" cx="4.5" cy="13.5" r="1.5"/>
+                        <circle fill="#a6a6a6" cx="12.5" cy="13.5" r="1.5"/>
+                        <path fill="#a6a6a6" d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/>
+                    </svg>
+                    <span>Корзина</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</header>
+<footer class="main-footer">
+    <section class="contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <div class="contact-card">
+            <h3 class="contact-card-title">Nёrds design studio</h3>
+            <address class="contact-card-address">
+                191186, Санкт-Петербург,
+                ул. Б.&nbsp;Конюшенная, д. 19/8
+                <br>
+                <a href="tel:+78122757575">тел.&nbsp;+7 (812) 275-75-75</a>
+            </address>
+            <a href="/form.html" class="button contact-button">Напишите нам</a>
+        </div>
+        <div class="maps">
+            <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65202987874744!2d30.32330650958949!3d59.93864459953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602443873777!5m2!1sru!2sru"
+                    width="600" height="416" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+
+            <img src="img/map.png" width="1440" height="416" alt="Карта">
+        </div>
+    </section>
+    <section class="social-media-footer">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p class="promo-footer">Скидка&nbsp;10% для друзей из&nbsp;социальных сетей.</p>
+        <ul class="social">
+            <li class="social-item"><a href="https://vk.com" class="social-link social-link-vk"
+                                       aria-label="Логотип Вконтакте"></a></li>
+            <li class="social-item"><a href="https://facebook.com" class="social-link social-link-fb"
+                                       aria-label="Логотип Фейсбука"></a></li>
+            <li class="social-item"><a href="https://instagram.com" class="social-link social-link-inst"
+                                       aria-label="Логотип Инстаграма"></a></li>
+        </ul>
+    </section>
+</footer>
 </body>
 </html>
