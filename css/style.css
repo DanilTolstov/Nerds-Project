@@ -1,12 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
 @font-face {
     font-family: "Roboto";
     font-style: normal;
@@ -31,13 +22,24 @@
     url("../fonts/robotobold.woff") format("woff");
 }
 
-       /*Global*/
+/*Общие стили*/
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.1;
     font-weight: 400;
+    overflow-x: hidden;
+    min-width: 1200px;
     margin: 0;
     padding: 0;
 }
@@ -45,6 +47,7 @@ body {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 .list-reset {
@@ -86,12 +89,19 @@ a {
 }
 
 .container {
-    max-width: 1190px;
+    width: 1190px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/*Header*/
+.subtitle {
+    color: #283136;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*Шапка*/
+
 .main-header {
     background-color: #eeeeee;
 }
@@ -106,6 +116,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
+    flex-wrap: wrap;
 }
 
 .nav-list {
@@ -124,25 +135,35 @@ a {
     margin-right: 45px;
 }
 
-.cart-button {
-    position: relative;
-    color: #000000;
+.cart {
+    margin-left: auto;
+    padding-top: 10px;
+    width: 115px;
 }
 
-.cart-icon {
-    position: absolute;
-    right: 100%;
-    transform: translateX(-100%);
+.cart::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/svg/cart-icon.svg");
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    margin-right: 25px;
+    margin-bottom: -2px;
 }
+
+/* Блок преимуществ */
 
 .features {
     background-color: #eeeeee;
+    padding: 80px 0;
     margin-bottom: 80px;
-    padding: 60px;
 }
+
 .features-list {
-    position: relative;
     display: flex;
+    position: relative;
+    justify-content: space-between;
 }
 
 .feature-item {
@@ -150,38 +171,37 @@ a {
     display: none;
 }
 
+.features-item-active {
+    display: flex;
+}
+
 .feature-content {
     z-index: 1;
+    min-width: 380px;
+    margin-right: 50px;
 }
 
-
-.feature-content > img {
+.feature-image {
     position: absolute;
-    z-index: 0;
-    top: 0;
+    min-width: 700px;
+    bottom: -80px;
     right: 0;
-}
+    z-index: 0;
 
-.features-list>.active {
-    display: flex;
 }
 
 .feature-title {
     margin: 0 0 28px;
-    padding-top: 65px;
     max-width: 540px;
     width: 100%;
     font-weight: 500;
     font-size: 55px;
 }
 
-.feature-subtitle {
+.feature-content .subtitle {
     width: 100%;
     max-width: 360px;
-    margin: 0 0 40px;
-    line-height: 1.5;
-    color: #283136;
-    text-align: left;
+    margin-bottom: 40px;
 }
 
 .slider-button {
@@ -196,6 +216,7 @@ a {
     display: flex;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 .slider-control {
@@ -203,7 +224,6 @@ a {
     width: 18px;
     height: 18px;
     background-color: #ffffff;
-    z-index: 1;
 }
 
 .slider-control:not(:last-child) {
@@ -214,27 +234,30 @@ a {
     position: relative;
 }
 
-.slider-control-active:before {
+.slider-control-active::before {
     content: "";
     position: absolute;
     width: 8px;
     height: 8px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 100%;
     border: 2px solid #c1c1c1;
 }
 
-.offer .container {
-    margin-bottom: 80px;
+/* Блок предложений */
+
+.offer {
+    margin-bottom: 40px;
     border-bottom: solid 2px #eeeeee;
+
 }
 
 
 .offer-list {
     display: flex;
-    margin: 80px;
+    padding-bottom: 80px;
 }
 
 .offer-list-item {
@@ -243,6 +266,19 @@ a {
 
 .offer-list-item:not(:last-child) {
     margin-right: 100px;
+}
+
+.offer-title {
+    padding: 0;
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.offer-list-item .subtitle {
+    margin-bottom: 35px;
 }
 
 .offer-list-item a {
@@ -255,21 +291,258 @@ a {
 .offer-button-1 {
     background-color: #fb565a;
 }
+
 .offer-button-2 {
     background-color: #00ca74;
 }
+
 .offer-button-3 {
     background-color: #efc84a;
 }
 
+/* Блок о компании */
+
 .about {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 80px;
+    border-bottom: solid 2px #eeeeee;
+}
+
+.about-us-wrapper {
+    padding-right: 150px;
+    min-width: 650px;
 }
 
 .tagline {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 500;
-    line-height: 45px;
+    line-height: 1;
+    margin-bottom: 35px;
 }
 
+.about-us-wrapper .subtitle {
+    margin-bottom: 50px;
+}
+
+.about-offer {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+
+.about-offer-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.about-offer-list {
+    margin-left: 35px;
+}
+
+.about-offer-item {
+    position: relative;
+}
+
+.about-offer-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    width: 25px;
+    height: 2px;
+    background-color: #fb565a;
+}
+
+.why-us-container {
+    min-width: 360px;
+}
+
+.why-we-logo {
+    margin-bottom: 40px;
+}
+
+.why-we-list {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 25px;
+    row-gap: 27px;
+}
+
+.why-we-item .subtitle {
+    line-height: 1.1;
+}
+
+.why-we-item > span {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+/* Блок наших клиентов */
+
+.our-clients-wrapper {
+    min-height: 180px;
+    padding-top: 45px;
+    margin-bottom: 80px;
+    border-bottom: solid 2px #eeeeee;
+
+}
+
+.clients-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clients-list-item {
+    position: relative;
+    min-width: 260px;
+    text-align: center;
+}
+
+.clients-list-item::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 52px;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    background-color: #eeeeee;
+}
+
+/* Футер */
+
+.main-footer {
+
+}
+
+.map {
+    margin-top: 80px;
+}
+
+.map-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 416px;
+    background-color: #b5b5b5;
+}
+
+.map-wrapper iframe {
+    z-index: 20;
+    border: none;
+}
+
+.map-wrapper img {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 416px;
+    margin: 0 auto;
+}
+
+.map-contacts {
+    position: absolute;
+    z-index: 30;
+    width: 319px;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 48px 48px 48px 50px;
+}
+
+
+.contact-card-title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.contact-card-address,
+.contact-card-phone a {
+    color: #666666;
+    margin-bottom: 37px;
+}
+
+
+.contact-button {
+    width: 219px;
+    background-color: #fb565a;
+    padding: 16px 15px;
+    border-radius: 3px;
+    display: block;
+}
+
+
+.footer-social-wrapper {
+    display: flex;
+    margin: 72px auto;
+    align-items: center;
+}
+
+.footer-social-content {
+
+}
+
+
+.footer-social-list {
+    display: flex;
+    margin-right: 140px;
+}
+
+
+.footer-social-item:not(:last-child) {
+    margin-right: 12px;
+}
+
+.footer-social-item {
+    cursor: pointer;
+}
+
+.footer-social-link {
+    display: inline-block;
+    border-radius: 100%;
+    width: 79px;
+    height: 79px;
+    background-color: #e1e1e1;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.social-link-vk {
+    background-image: url("/img/svg/vk-icon.svg");
+}
+
+.social-link-fb {
+    background-image: url("/img/svg/fb-icon.svg");
+}
+
+.social-link-inst {
+    background-image: url("/img/svg/insta-icon.svg");
+}
+
+
+.footer-social-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.footer-social-subtitle {
+    color: #444444;
+    margin: 0;
+}
+
+/* Блок формы */
+
+.pop-up {
+    display: none;
+}
