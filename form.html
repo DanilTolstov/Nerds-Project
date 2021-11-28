@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма записи «Nerds»</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="pop-up">
+    <div class="pop-up-container">
+        <h2 class="pop-up-title">Напишите нам</h2>
+        <form class="pop-up-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="pop-up-form-wrapper">
+                <p class="enter-name-form">
+                    <label class="enter-name" for="your-name">Ваше имя:</label>
+                    <input class="pop-up-input name" type="text" name="name" id="your-name" placeholder="Имя Фамилия"
+                           pattern="^[А-Яа-яЁё\s]+$">
+                </p>
+                <p class="enter-email-form">
+                    <label class="enter-email" for="your-email">Ваш e-mail:</label>
+                    <input class="pop-up-input email" type="email" name="email" id="your-email" placeholder="email@example.com">
+                </p>
+            </div>
+            <p class="enter-letter-form">
+                <label class="enter-letter" for="your-letter">Текст письма:</label>
+                <textarea class="pop-up-input textarea" name="letter" id="your-letter" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="btn button-form" type="submit">Отправить</button>
+        </form>
+        <button class="btn close-pop-up" type="button" aria-label="Закрыть окно">
+            <svg
+                    width="21px" height="21px" viewBox="0 0 21 21">
+                <path fill="#FB565A" d="M13.328,10.5l7.371-7.371c0.389-0.389,0.389-1.025,0-1.414l-1.414-1.415c-0.389-0.389-1.025-0.389-1.414,0
+	L10.5,7.672L3.129,0.301c-0.389-0.389-1.025-0.389-1.414,0L0.301,1.715c-0.389,0.389-0.389,1.025,0,1.414L7.672,10.5l-7.371,7.371
+	c-0.389,0.389-0.389,1.025,0,1.414l1.415,1.414c0.389,0.389,1.025,0.389,1.414,0l7.371-7.371l7.371,7.371
+	c0.389,0.389,1.025,0.389,1.414,0l1.414-1.414c0.389-0.389,0.389-1.025,0-1.414L13.328,10.5z"/>
+            </svg>
+        </button>
+    </div>
+</section>
+
+</body>
+</html>
