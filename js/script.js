@@ -1,56 +1,36 @@
-let link = document.querySelector(".contact-button");
-let modal = document.querySelector(".pop-up");
-let close = document.querySelector(".close-pop-up");
-let form = document.querySelector(".pop-up-form");
-let login = modal.querySelector("#your-name");
-let email = modal.querySelector("#your-email");
+const link = document.querySelector(".contact-button");
+const modal = document.querySelector(".pop-up");
+const close = document.querySelector(".close-pop-up");
+const form = modal.querySelector(".pop-up-form");
+const login = modal.querySelector("#your-name");
+const email = modal.querySelector("#your-email");
+const letter = modal.querySelector("#your-letter");
+const button = modal.querySelector(".button-form");
+const body = document.body;
 
-let isStorageSupport = true;
-let storage = "";
-
-try {
-    storage = localStorage.getItem("login");
-} catch (err) {
-    isStorageSupport = false;
-}
 
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
     modal.classList.add("pop-up-show");
+    body.classList.add("pop-up-overflow");
+});
 
-    if (storage) {
-        login.value = storage;
-        email.focus();
-    } else {
-        login.focus();
+close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modal.classList.remove("pop-up-show");
+        body.classList.remove("pop-up-overflow");
+});
+
+document.addEventListener("keydown", function (evt){
+    evt.preventDefault();
+    if (evt.key === "Escape") {
+        modal.classList.remove("pop-up-show");
+        body.classList.remove("pop-up-overflow");
     }
 });
 
-close.addEventListener("click", function (evt){
-   evt.preventDefault();
-   modal.classList.remove("pop-up-show");
-   modal.classList.remove("pop-up-error");
-});
-
-form.addEventListener("submit", function (evt) {
-    if (!login.value || !email.value) {
-        evt.preventDefault();
-        modal.classList.remove("pop-up-error")
-        modal.offsetWidth = modal.offsetWidth;
-        modal.classList.add("pop-up-error");
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem("login", login.value);
-        }
-    }
-});
-
-window.addEventListener("keydown", function (evt){
-    if (evt.key !== "Escape" ) {
-        evt.preventDefault();
-        if (modal.classList.contains("modal-show")) {
-            modal.classList.remove("pop-up-show");
-            modal.classList.remove("pop-up-error");
-        }
+login.addEventListener("input", function (){
+    if (login.value.length > 1){
+        button.removeAttribute("disabled");
     }
 });

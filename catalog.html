@@ -44,27 +44,95 @@
     <div class="container catalog-page-wrapper">
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров дизайн студии Nerds</h2>
-                <form action="https://echo.htmlacademy.ru" method="post">
-                    <fieldset class="filter-item">
-                        <legend class="filter-item-title">Стоимость:</legend>
-                        <div class="cost-range">
-                            <div class="range-controls">
-                                <div class="scale">
-                                    <div class="bar" style="width:64%;"></div>
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="filter-item">
+                    <legend class="filter-item-title">Стоимость:</legend>
+                    <div class="cost-range">
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar" style="width:64%;"></div>
                                 <div class="toggle toggle-min"></div>
                                 <div class="toggle toggle-max"></div>
-                                </div>
-                            </div>
-                            <div class="cost-controls">
-                                <label class="min-cost">от<input type="text" value="0"></label>
-                                <label class="max-cost">до <input type="text" value="15000"></label>
                             </div>
                         </div>
-                    </fieldset>
+                        <div class="cost-controls">
+                            <label class="min-cost">от<input type="text" value="0"></label>
+                            <label class="max-cost">до <input type="text" value="15000"></label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="filter-item">
+                    <legend class="filter-item-title">Сетка:</legend>
+                    <label class="filter-item-label">
+                        <input type="radio" name="radio-filter" value="adaptive" checked>
+                        <span class="radio-indicator"></span>
+                        <span class="filter-layout-text">Адаптивная</span>
+                    </label>
+                    <label class="filter-item-label">
+                        <input type="radio" name="radio-filter" value="fixed">
+                        <span class="radio-indicator"></span>
+                        <span class="filter-layout-text">Фиксированная</span>
+                    </label>
+                    <label class="filter-item-label">
+                        <input type="radio" name="radio-filter" value="rubber">
+                        <span class="radio-indicator"></span>
+                        <span class="filter-layout-text">Резиновая</span>
+                    </label>
+                </fieldset>
+                <fieldset class="filter-item">
+                    <legend class="filter-item-title">Особенности:</legend>
+                    <label class="filter-item-label">
+                        <input type="checkbox" name="feature-slider" checked>
+                        <span class="checkbox-indicator"></span>
+                        <span class="filter-feature-text">Слайдер</span>
+                    </label>
+                    <label class="filter-item-label">
+                        <input type="checkbox" name="feature-block">
+                        <span class="checkbox-indicator"></span>
+                        <span class="filter-feature-text">Блок преимуществ</span>
+                    </label>
+                    <label class="filter-item-label">
+                        <input type="checkbox" name="feature-news" checked>
+                        <span class="checkbox-indicator"></span>
+                        <span class="filter-feature-text">Новости</span>
+                    </label>
+                    <label class="filter-item-label">
+                        <input type="checkbox" name="feature-gallery">
+                        <span class="checkbox-indicator"></span>
+                        <span class="filter-feature-text">Галерея</span>
+                    </label>
+                    <label class="filter-item-label">
+                        <input type="checkbox" name="feature-cart">
+                        <span class="checkbox-indicator"></span>
+                        <span class="filter-feature-text">Корзина</span>
+                    </label>
+                </fieldset>
+                <fieldset class="filter-item">
+                    <button type="submit" class="btn feature-button">Показать</button>
+                </fieldset>
+            </form>
+        </section>
+    </div>
 
-
-                </form>
-    </section>
+    <div class="catalog-sort">
+        <nav class="sort-nav">
+            <p>Сортировать:</p>
+            <ul class="sort-list list-reset">
+                <li class="sort-item">по цене</li>
+                <li class="sort-item">по типу</li>
+                <li class="sort-item">по названию</li>
+                <li class="sort-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                        <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                    </svg>
+                </li>
+                <li class="sort-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                        <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
     </div>
 </main>
 
