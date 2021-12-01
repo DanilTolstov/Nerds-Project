@@ -40,13 +40,13 @@
     </div>
 </header>
 <main class="catalog-page">
-    <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+    <h1 class="catalog-page-title">Магазин готовых шаблонов</h1>
     <div class="container catalog-page-wrapper">
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров дизайн студии Nerds</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="filter-item">
-                    <legend class="filter-item-title">Стоимость:</legend>
+                    <legend class="catalog-title">Стоимость:</legend>
                     <div class="cost-range">
                         <div class="range-controls">
                             <div class="scale">
@@ -62,7 +62,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="filter-item">
-                    <legend class="filter-item-title">Сетка:</legend>
+                    <legend class="catalog-title">Сетка:</legend>
                     <label class="filter-item-label">
                         <input type="radio" name="radio-filter" value="adaptive" checked>
                         <span class="radio-indicator"></span>
@@ -80,7 +80,7 @@
                     </label>
                 </fieldset>
                 <fieldset class="filter-item">
-                    <legend class="filter-item-title">Особенности:</legend>
+                    <legend class="catalog-title">Особенности:</legend>
                     <label class="filter-item-label">
                         <input type="checkbox" name="feature-slider" checked>
                         <span class="checkbox-indicator"></span>
@@ -112,27 +112,95 @@
                 </fieldset>
             </form>
         </section>
-    </div>
-
-    <div class="catalog-sort">
-        <nav class="sort-nav">
-            <p>Сортировать:</p>
-            <ul class="sort-list list-reset">
-                <li class="sort-item">по цене</li>
-                <li class="sort-item">по типу</li>
-                <li class="sort-item">по названию</li>
-                <li class="sort-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                        <path fill="#231F20" d="M5.5 10L0 0h11"/>
-                    </svg>
+        <section class="templates">
+            <h3 class="visually-hidden">Доступные предложения</h3>
+            <div class="sorting">
+                <nav class="sorting-nav">
+                    <h3 class="sorting-title catalog-title">Сортировать:</h3>
+                    <ul class="sorting-list list-reset">
+                        <li class="sorting-item">
+                            <button type="button" class="btn sorting-btn">по цене</button>
+                        </li>
+                        <li class="sorting-item">
+                            <button type="button" class="btn sorting-btn">по типу</button>
+                        </li>
+                        <li class="sorting-item">
+                            <button type="button" class="btn sorting-btn">по названию</button>
+                        </li>
+                    </ul>
+                    <div class="sorting-controls">
+                        <button class="btn sorting-control current" type="button">
+                            <span class="visually-hidden">по убыванию:</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                            </svg>
+                        </button>
+                        <button class="btn sorting-control" type="button">
+                            <span class="visually-hidden">по возрастанию:</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <ul class="template-list list-reset">
+                <li class="template-item">
+                    <img src="img/img_sedona.jpg" alt="Страница сайта с изображением гор." height="576" width="360"/>
+                    <div class="template-card">
+                        <a class="template-link" href="#">sedona</a>
+                        <p class="template-subtitle">Информационный сайт для туристов</p>
+                        <a class="btn template-btn" href="#">9 900 руб.</a>
+                    </div>
                 </li>
-                <li class="sort-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                        <path fill="#231F20" d="M5.5 0L0 10h11z"/>
-                    </svg>
+                <li class="template-item">
+                    <img src="img/img_pink.jpg" alt="Страница сайта с изображением приложения." height="576" width="360"/>
+                    <div class="template-card">
+                        <a class="template-link" href="#">pink</a>
+                        <p class="template-subtitle">Продуктовый лендинг приложения для iOS и Android</p>
+                        <a class="btn template-btn" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="template-item">
+                    <img src="img/img_barbershop.jpg" alt="Страница сайта с изображением салона барбершопа.." height="576" width="360"/>
+                    <div class="template-card">
+                        <a class="template-link" href="#">barbershop</a>
+                        <p class="template-subtitle">Сайт салона красоты.Для мужчин, да.</p>
+                        <a class="btn template-btn" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="template-item">
+                    <img src="img/img_mishka.jpg" alt="Страница сайта с изображением вязаных игрушек." height="576" width="360"/>
+                    <div class="template-card">
+                        <a class="template-link" href="#">mishka</a>
+                        <p class="template-subtitle">Интернет-магазин вязаных игрушек</p>
+                        <a class="btn template-btn" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="template-item">
+                    <img src="img/img_aplus.jpg" alt="страница сайта образовательных курсов" height="576" width="360"/>
+                    <div class="template-card">
+                        <a class="template-link" href="#">A Plus</a>
+                        <p class="template-subtitle">Лендинг курсов повышения квалификации</p>
+                        <a class="btn template-btn" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="template-item">
+                    <img src="img/img_kvast.jpg" alt="страница сайта с изображением пшеницы" height="576" width="360"/>
+                    <div class="template-card">
+                        <a class="template-link" href="#">кваст</a>
+                        <p class="template-subtitle">Промо-сайт производителя крафтового кваса</p>
+                        <a class="btn template-btn" href="#">9 900 руб.</a>
+                    </div>
                 </li>
             </ul>
-        </nav>
+            <ul class="pagination-list list-reset">
+                <li class="pagination-item"><a href="#" class="btn pagination-btn current">1</a></li>
+                <li class="pagination-item"><a href="#" class="btn pagination-btn">2</a></li>
+                <li class="pagination-item"><a href="#" class="btn pagination-btn">3</a></li>
+                <li class="pagination-item"><a href="#" class="btn pagination-btn next-btn">Следующая</a></li>
+            </ul>
+        </section>
     </div>
 </main>
 
@@ -143,6 +211,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989817947686!2d30.320959575543156!3d59.93879621560312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1505742543957"
                     width="100%" height="416" allowfullscreen title="Офис компании Нердс по адресу 91186,
       Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" aria-hidden="false" tabindex="0"></iframe>
+
             <div class="container">
                 <div class="map-contacts">
                     <div class="contact-card">
@@ -180,8 +249,7 @@
                                                       class="footer-social-link"
                                                       aria-label="Логотип Фейсбука">
                         <span class="visually-hidden">Фейсбук</span>
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22"
-                             viewBox="0 0 12 22">
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
                             <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
                         </svg>
                     </a>
@@ -191,8 +259,7 @@
                            class="footer-social-link"
                            aria-label="Логотип Инстаграма">
                             <span class="visually-hidden">Инстаграм</span>
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                 viewBox="0 0 21 21">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                                 <path d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z"/>
                             </svg>
                         </a>
@@ -209,27 +276,24 @@
 <section class="pop-up">
     <div class="pop-up-container">
         <h2 class="pop-up-title">Напишите нам</h2>
-        <form class="pop-up-form" action="https://echo.htmlacademy.ru">
+        <form class="pop-up-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="pop-up-form-wrapper">
                 <p class="enter-name-form">
                     <label class="enter-name" for="your-name">Ваше имя:</label>
-                    <input class="pop-up-input name" type="text" name="name" id="your-name" placeholder="Имя Фамилия"
-                           pattern="^[А-Яа-яЁё\s]+$">
+                    <input class="pop-up-input name" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
                 </p>
                 <p class="enter-email-form">
                     <label class="enter-email" for="your-email">Ваш e-mail:</label>
-                    <input class="pop-up-input email" type="email" name="email" id="your-email"
-                           placeholder="email@example.com">
+                    <input class="pop-up-input email" type="email" name="email" id="your-email" placeholder="email@example.com">
                 </p>
             </div>
             <p class="enter-letter-form">
                 <label class="enter-letter" for="your-letter">Текст письма:</label>
-                <textarea class="pop-up-input textarea" name="letter" id="your-letter"
-                          placeholder="В свободной форме"></textarea>
+                <textarea class="pop-up-input textarea" name="letter" id="your-letter" placeholder="В свободной форме"></textarea>
             </p>
-            <button class="btn button-form" type="submit">Отправить</button>
+            <button class="btn button-form" type="submit" disabled>Отправить</button>
         </form>
-        <button class="btn close-popup" type="button" aria-label="Закрыть окно">
+        <button class="btn close-pop-up" type="button" aria-label="Закрыть окно">
             <svg
                     width="21px" height="21px" viewBox="0 0 21 21">
                 <path fill="#FB565A" d="M13.328,10.5l7.371-7.371c0.389-0.389,0.389-1.025,0-1.414l-1.414-1.415c-0.389-0.389-1.025-0.389-1.414,0
@@ -240,5 +304,6 @@
         </button>
     </div>
 </section>
+<script src="js/script.js"></script>
 </body>
 </html>
