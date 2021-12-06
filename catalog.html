@@ -14,28 +14,25 @@
 <header class="main-header">
     <div class="container">
         <nav class="header-nav">
-            <a href="index.html" class="header-logo-catalog">
-                <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds.">
+            <a class="header-logo current-logo">
+                <img class="header-image" src="img/svg/nerds-logo.svg" width="160" height="65"
+                     alt="Логотип дизайн-студии Nerds.">
             </a>
             <ul class="nav-list list-reset">
-                <li class="nav-list-item"><a href="index.html" class="nav-link">Студия</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link active">Студия</a></li>
                 <li class="nav-list-item"><a href="#" class="nav-link">Клиенты</a></li>
-                <li class="nav-list-item-catalog"><a href="#" class="nav-link">Магазин</a></li>
+                <li class="nav-list-item_active"><a href="catalog.html" class="nav-link">Магазин</a></li>
                 <li class="nav-list-item"><a href="#" class="nav-link">Контакты</a></li>
             </ul>
-            <ul class="nav-list list-reset">
-                <li class="nav-list-item cart">
-                    <a href="#" class="nav-link">
-                        <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                             viewBox="0 0 15 15">
-                            <circle fill="#a6a6a6" cx="4.5" cy="13.5" r="1.5"/>
-                            <circle fill="#a6a6a6" cx="12.5" cy="13.5" r="1.5"/>
-                            <path fill="#a6a6a6" d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/>
-                        </svg>
-                        Корзина
-                    </a>
-                </li>
-            </ul>
+            <a class="cart">
+                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                     viewBox="0 0 15 15">
+                    <circle fill="#a6a6a6" cx="4.5" cy="13.5" r="1.5"/>
+                    <circle fill="#a6a6a6" cx="12.5" cy="13.5" r="1.5"/>
+                    <path fill="#a6a6a6" d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/>
+                </svg>
+                Корзина
+            </a>
         </nav>
     </div>
 </header>
@@ -43,10 +40,10 @@
     <h1 class="catalog-page-title">Магазин готовых шаблонов</h1>
     <div class="container catalog-page-wrapper">
         <section class="filters">
-            <h2 class="visually-hidden">Фильтр товаров дизайн студии Nerds</h2>
+            <h2 class="visually-hidden">Фильтр шаблонов</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="filter-item">
-                    <legend class="catalog-title">Стоимость:</legend>
+                    <legend class="filter-title filter-cost">Стоимость:</legend>
                     <div class="cost-range">
                         <div class="range-controls">
                             <div class="scale">
@@ -57,12 +54,12 @@
                         </div>
                         <div class="cost-controls">
                             <label class="min-cost">от<input type="text" value="0"></label>
-                            <label class="max-cost">до <input type="text" value="15000"></label>
+                            <label class="max-cost">до<input type="text" value="15 000"></label>
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="filter-item">
-                    <legend class="catalog-title">Сетка:</legend>
+                <fieldset class="filter-item filter-item-layout">
+                    <legend class="filter-title filter-layout">Сетка:</legend>
                     <label class="filter-item-label">
                         <input type="radio" name="radio-filter" value="adaptive" checked>
                         <span class="radio-indicator"></span>
@@ -79,8 +76,8 @@
                         <span class="filter-layout-text">Резиновая</span>
                     </label>
                 </fieldset>
-                <fieldset class="filter-item">
-                    <legend class="catalog-title">Особенности:</legend>
+                <fieldset class="filter-item filter-item-features">
+                    <legend class="filter-title filter-features">Особенности:</legend>
                     <label class="filter-item-label">
                         <input type="checkbox" name="feature-slider" checked>
                         <span class="checkbox-indicator"></span>
@@ -113,10 +110,10 @@
             </form>
         </section>
         <section class="templates">
-            <h3 class="visually-hidden">Доступные предложения</h3>
-            <div class="sorting">
-                <nav class="sorting-nav">
+            <h2 class="visually-hidden">Каталог предложений</h2>
+            <div class="catalog-sort">
                     <h3 class="sorting-title catalog-title">Сортировать:</h3>
+                <div class="inner-sorting">
                     <ul class="sorting-list list-reset">
                         <li class="sorting-item">
                             <button type="button" class="btn sorting-btn">по цене</button>
@@ -128,6 +125,7 @@
                             <button type="button" class="btn sorting-btn">по названию</button>
                         </li>
                     </ul>
+
                     <div class="sorting-controls">
                         <button class="btn sorting-control current" type="button">
                             <span class="visually-hidden">по убыванию:</span>
@@ -142,14 +140,14 @@
                             </svg>
                         </button>
                     </div>
-                </nav>
-            </div>
+                </div>
+                </div>
             <ul class="template-list list-reset">
                 <li class="template-item">
                     <img src="img/img_sedona.jpg" alt="Страница сайта с изображением гор." height="576" width="360"/>
                     <div class="template-card">
                         <a class="template-link" href="#">sedona</a>
-                        <p class="template-subtitle">Информационный сайт для туристов</p>
+                        <p class="template-subtitle">Информационный сайт<br>для туристов</p>
                         <a class="btn template-btn" href="#">9 900 руб.</a>
                     </div>
                 </li>
@@ -203,7 +201,6 @@
         </section>
     </div>
 </main>
-
 <footer class="main-footer">
     <section class="map">
         <div class="map-wrapper">
@@ -249,7 +246,8 @@
                                                       class="footer-social-link"
                                                       aria-label="Логотип Фейсбука">
                         <span class="visually-hidden">Фейсбук</span>
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22"
+                             viewBox="0 0 12 22">
                             <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
                         </svg>
                     </a>
@@ -259,7 +257,8 @@
                            class="footer-social-link"
                            aria-label="Логотип Инстаграма">
                             <span class="visually-hidden">Инстаграм</span>
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+                                 viewBox="0 0 21 21">
                                 <path d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z"/>
                             </svg>
                         </a>
@@ -284,12 +283,14 @@
                 </p>
                 <p class="enter-email-form">
                     <label class="enter-email" for="your-email">Ваш e-mail:</label>
-                    <input class="pop-up-input email" type="email" name="email" id="your-email" placeholder="email@example.com">
+                    <input class="pop-up-input email" type="email" name="email" id="your-email"
+                           placeholder="email@example.com">
                 </p>
             </div>
             <p class="enter-letter-form">
                 <label class="enter-letter" for="your-letter">Текст письма:</label>
-                <textarea class="pop-up-input textarea" name="letter" id="your-letter" placeholder="В свободной форме"></textarea>
+                <textarea class="pop-up-input textarea" name="letter" id="your-letter"
+                          placeholder="В свободной форме"></textarea>
             </p>
             <button class="btn button-form" type="submit" disabled>Отправить</button>
         </form>
@@ -304,6 +305,6 @@
         </button>
     </div>
 </section>
-<script src="js/script.js"></script>
+<script src="js/popup.js"></script>
 </body>
 </html>

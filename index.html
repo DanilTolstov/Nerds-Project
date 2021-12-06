@@ -14,18 +14,17 @@
 <header class="main-header">
     <div class="container">
         <nav class="header-nav">
-            <a href="#" class="header-logo">
-                <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds.">
+            <a class="header-logo current-logo">
+                <img class="header-image" src="img/svg/nerds-logo.svg" width="160" height="65"
+                     alt="Логотип дизайн-студии Nerds.">
             </a>
             <ul class="nav-list list-reset">
-                <li class="nav-list-item-studio"><a href="#" class="nav-link">Студия</a></li>
+                <li class="nav-list-item_active"><a href="#" class="nav-link active">Студия</a></li>
                 <li class="nav-list-item"><a href="#" class="nav-link">Клиенты</a></li>
                 <li class="nav-list-item"><a href="catalog.html" class="nav-link">Магазин</a></li>
                 <li class="nav-list-item"><a href="#" class="nav-link">Контакты</a></li>
             </ul>
-            <ul class="nav-list list-reset">
-                <li class="nav-list-item cart">
-                    <a href="#" class="nav-link">
+                    <a class="cart">
                         <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
                              viewBox="0 0 15 15">
                             <circle fill="#a6a6a6" cx="4.5" cy="13.5" r="1.5"/>
@@ -34,8 +33,6 @@
                         </svg>
                         Корзина
                     </a>
-                </li>
-            </ul>
         </nav>
     </div>
 </header>
@@ -59,7 +56,7 @@
                 <li class="feature-item">
                     <div class="feature-content">
                         <h3 class="feature-title">Любим математику как никто другой</h3>
-                        <p class="subtitle">Никакого креатива, только математические формулы
+                        <p class="subtitle">Никакого креатива, только математические формулы<br>
                             для расчета идеальных пропорций.</p>
                         <a href="#" class="btn slider-button">Узнать больше</a>
                     </div>
@@ -70,9 +67,8 @@
                 </li>
                 <li class="feature-item">
                     <div class="feature-content">
-                        <h3 class="feature-title">Только ночь,
-                            только хардкор</h3>
-                        <p class="subtitle">Работать днем, как все? Мы&nbsp;против этого.
+                        <h3 class="feature-title">Только ночь,только хардкор</h3>
+                        <p class="subtitle">Работать днем, как все? Мы&nbsp;против этого.<br>
                             Ближе к&nbsp;полуночи работа только начинается.</p>
                         <a href="#" class="btn slider-button">Узнать больше</a>
                     </div>
@@ -119,16 +115,13 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about container">
         <h2 class="visually-hidden">О нас</h2>
-        <div class="container">
             <div class="about-container">
                 <div class="about-us-wrapper">
-                    <h3 class="tagline">Мы&nbsp;&mdash;маленькая, но&nbsp;гордая
-                        дизайн-студия из&nbsp;Краснодара.</h3>
+                    <p class="tagline">Мы &ndash; маленькая, но гордая<br>дизайн-студия из Краснодара.</p>
                     <p class="subtitle">
-                        Исповедуем принципы минимализма и чистоты. Ставим математический расчет
-                        превыше креатива. Работаем не покладая рук, как роботы.
+                        Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше креатива. Работаем не покладая рук, как роботы.
                     </p>
                     <p class="about-offer">Выполняем заказы на&nbsp;разработку:</p>
 
@@ -141,30 +134,23 @@
                 <div class="why-us-wrapper">
                     <img class="why-we-logo" src="img/nerds-illustration.png" height="208" width="360"
                          alt="Логотип дизайн-студии Nerds.">
-                    <p class="why-us-title">с&nbsp;2004 года Любим точность во&nbsp;всем:</p>
-                    <ul class="why-we-list list-reset">
-                        <li class="why-we-item">
-                    <span>
-                        146<sup>%</sup>
-                    </span>
-                            <p class="subtitle">Уровень самоотдачи</p>
-                        </li>
-                        <li class="why-we-item">
-                    <span>
-                        100<sup>%</sup>
-                    </span>
-                            <p class="subtitle">Соблюдение сроков</p>
-                        </li>
-                        <li class="why-we-item">
-                    <span>
-                        50<sup>%</sup>
-                    </span>
-                            <p class="subtitle">Минимальная предоплата</p>
-                        </li>
-                    </ul>
+                    <h2 class="why-us-title">с&nbsp;2004 года Любим точность во&nbsp;всем:</h2>
+                    <dl class="why-we-list list-reset">
+                        <div class="why-we-item">
+                            <dt class="subtitle">Уровень самоотдачи</dt>
+                            <dd class="definition">146<sup>%</sup></dd>
+                        </div>
+                        <div class="why-we-item">
+                            <dt class="subtitle">Соблюдение сроков</dt>
+                            <dd class="definition">100<sup>%</sup></dd>
+                        </div>
+                        <div class="why-we-item">
+                            <dt class="subtitle">Минимальная предоплата</dt>
+                            <dd class="definition">50<sup>%</sup></dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
-        </div>
     </section>
     <section class="our-clients">
         <h2 class="visually-hidden">Наши клиенты</h2>
@@ -244,7 +230,8 @@
                                                       class="footer-social-link"
                                                       aria-label="Логотип Фейсбука">
                         <span class="visually-hidden">Фейсбук</span>
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22"
+                             viewBox="0 0 12 22">
                             <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
                         </svg>
                     </a>
@@ -254,7 +241,8 @@
                            class="footer-social-link"
                            aria-label="Логотип Инстаграма">
                             <span class="visually-hidden">Инстаграм</span>
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+                                 viewBox="0 0 21 21">
                                 <path d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z"/>
                             </svg>
                         </a>
@@ -273,18 +261,20 @@
         <h2 class="pop-up-title">Напишите нам</h2>
         <form class="pop-up-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="pop-up-form-wrapper">
-            <p class="enter-name-form">
-                <label class="enter-name" for="your-name">Ваше имя:</label>
-                <input class="pop-up-input name" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
-            </p>
-            <p class="enter-email-form">
-                <label class="enter-email" for="your-email">Ваш e-mail:</label>
-                <input class="pop-up-input email" type="email" name="email" id="your-email" placeholder="email@example.com">
-            </p>
+                <p class="enter-name-form">
+                    <label class="enter-name" for="your-name">Ваше имя:</label>
+                    <input class="pop-up-input name" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
+                </p>
+                <p class="enter-email-form">
+                    <label class="enter-email" for="your-email">Ваш e-mail:</label>
+                    <input class="pop-up-input email" type="email" name="email" id="your-email"
+                           placeholder="email@example.com">
+                </p>
             </div>
             <p class="enter-letter-form">
                 <label class="enter-letter" for="your-letter">Текст письма:</label>
-                <textarea class="pop-up-input textarea" name="letter" id="your-letter" placeholder="В свободной форме"></textarea>
+                <textarea class="pop-up-input textarea" name="letter" id="your-letter"
+                          placeholder="В свободной форме"></textarea>
             </p>
             <button class="btn button-form" type="submit" disabled>Отправить</button>
         </form>
@@ -299,6 +289,7 @@
         </button>
     </div>
 </section>
-<script src="js/script.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/popup.js"></script>
 </body>
 </html>

@@ -8,6 +8,8 @@ const letter = modal.querySelector("#your-letter");
 const button = modal.querySelector(".button-form");
 const body = document.body;
 
+let isValidate = false;
+
 
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -22,7 +24,6 @@ close.addEventListener("click", function (evt) {
 });
 
 document.addEventListener("keydown", function (evt){
-    evt.preventDefault();
     if (evt.key === "Escape") {
         modal.classList.remove("pop-up-show");
         body.classList.remove("pop-up-overflow");
@@ -30,7 +31,20 @@ document.addEventListener("keydown", function (evt){
 });
 
 login.addEventListener("input", function (){
-    if (login.value.length > 1){
+    if (login.value.length > 1 && email.value.length > 1 && letter.value.length > 1 ){
         button.removeAttribute("disabled");
     }
 });
+
+email.addEventListener("input", function (){
+    if (login.value.length > 1 && email.value.length > 1 && letter.value.length > 1 ){
+        button.removeAttribute("disabled");
+    }
+});
+
+letter.addEventListener("input", function (){
+    if (login.value.length > 1 && email.value.length > 1 && letter.value.length > 1 ){
+        button.removeAttribute("disabled");
+    }
+});
+
